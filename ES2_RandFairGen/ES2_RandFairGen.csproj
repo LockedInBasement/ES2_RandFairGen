@@ -6,4 +6,59 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="ES2Materials\Background.jpg" />
+    <None Remove="ES2Materials\ES2_Logo.jpg" />
+    <None Remove="ES2Materials\P1_Cravers.bmp" />
+    <None Remove="ES2Materials\P1_Horatio.bmp" />
+    <None Remove="ES2Materials\P1_Lumeris.bmp" />
+    <None Remove="ES2Materials\P1_RiftBorn.bmp" />
+    <None Remove="ES2Materials\P1_Sophons.bmp" />
+    <None Remove="ES2Materials\P1_Unfallen.bmp" />
+    <None Remove="ES2Materials\P1_UnitedEmpire.bmp" />
+    <None Remove="ES2Materials\P1_Vodyani.bmp" />
+    <None Remove="ES2Materials\Portrait.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignColors" Version="1.2.2" />
+    <PackageReference Include="MaterialDesignThemes" Version="3.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="ES2Materials\Background.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ES2Materials\ES2_Logo.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ES2Materials\P1_Cravers.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ES2Materials\P1_Horatio.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ES2Materials\P1_Lumeris.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ES2Materials\P1_RiftBorn.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ES2Materials\P1_Sophons.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ES2Materials\P1_Unfallen.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ES2Materials\P1_UnitedEmpire.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ES2Materials\P1_Vodyani.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ES2Materials\Portrait.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
 </Project>
