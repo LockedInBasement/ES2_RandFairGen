@@ -9,9 +9,11 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ES2_RandFairGenLibrary.ES2_ExportModels;
 
 namespace ES2_RandFairGen
 {
@@ -29,5 +31,22 @@ namespace ES2_RandFairGen
         {
             Application.Current.Shutdown();
         }
+
+        private void ButtonOptionsMenu_Click(object sender, RoutedEventArgs e)
+        {
+            Storyboard storyboard = (Storyboard)TryFindResource("SlideMainPage");
+            storyboard.Begin();
+        }
+
+        private void ExportDataToTxtButton_Click(object sender, RoutedEventArgs e)
+        {
+            ExportModFile exportModFile = new ExportModFile(); 
+        }
+
+        private void ChangePathButton_Click(object sender, RoutedEventArgs e)
+        {
+            //To DO
+        }
+        
     }
 }

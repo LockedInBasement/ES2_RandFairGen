@@ -61,4 +61,12 @@
     </Resource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ES2_RandFairGenLibrary\ES2_RandFairGenLibrary.csproj" />
+  </ItemGroup>
+
 </Project>
