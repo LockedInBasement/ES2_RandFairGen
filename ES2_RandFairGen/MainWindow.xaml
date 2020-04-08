@@ -173,13 +173,15 @@
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="1" Background="#FF222E2C">
                 <Image Height="150" VerticalAlignment="Top" Source="ES2Materials/ES2_Logo.jpg" Stretch="UniformToFill"/>
+                <!--
                 <Ellipse Height="100" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="20 100" Stroke="White">
                     <Ellipse.Fill>
                         <ImageBrush ImageSource="ES2Materials/Portrait.jpg" Stretch="UniformToFill"/>
                     </Ellipse.Fill>
                 </Ellipse>
+                    -->
                 <TextBlock Text="Info" Foreground="White" FontSize="32" FontFamily="Impact" Margin="10 100" VerticalAlignment="Top"/>
-                <StackPanel Margin="0 150 0 20">
+                <StackPanel Margin="0 120 0 0">
                     <Grid Height="40" Margin="10 50 0 0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="100"/>
@@ -225,8 +227,8 @@
                         </Button>
                     </Grid>
 
-                    <Button x:Name="ShowPanel" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="1" Width="30" Height="30" 
-                                Padding="0" Background="{x:Null}" BorderBrush="{x:Null}"  Click="ExportDataToTxtButton_Click">
+                    <Button x:Name="ShowPanel" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="30" Height="30" 
+                                Padding="0" Background="{x:Null}" BorderBrush="{x:Null}"  Click="ExportDataToTxtButton_Click" Margin="0 40 0 0" >
                         <materialDesign:PackIcon Kind="ArrowForward" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Height="20" Width="20"/>
                     </Button>
 
