@@ -8,6 +8,22 @@
 
   <ItemGroup>
     <None Remove="ES2Materials\Background.jpg" />
+    <None Remove="ES2Materials\EP_Cravers.jpg" />
+    <None Remove="ES2Materials\EP_Cravers.xcf" />
+    <None Remove="ES2Materials\EP_Horatio.jpg" />
+    <None Remove="ES2Materials\EP_Horatio.xcf" />
+    <None Remove="ES2Materials\EP_Lumeris.jpg" />
+    <None Remove="ES2Materials\EP_Lumeris.xcf" />
+    <None Remove="ES2Materials\EP_RiftBorn.jpg" />
+    <None Remove="ES2Materials\EP_RiftBorn.xcf" />
+    <None Remove="ES2Materials\EP_Sophons.jpg" />
+    <None Remove="ES2Materials\EP_Sophons.xcf" />
+    <None Remove="ES2Materials\EP_Unfallen.jpg" />
+    <None Remove="ES2Materials\EP_Unfallen.xcf" />
+    <None Remove="ES2Materials\EP_UnitedEmpire.jpg" />
+    <None Remove="ES2Materials\EP_UnitedEmpire.xcf" />
+    <None Remove="ES2Materials\EP_Vodyani.jpg" />
+    <None Remove="ES2Materials\EP_Vodyani.xcf" />
     <None Remove="ES2Materials\ES2_Logo.jpg" />
     <None Remove="ES2Materials\P1_Cravers.bmp" />
     <None Remove="ES2Materials\P1_Horatio.bmp" />
@@ -29,6 +45,38 @@
     <Resource Include="ES2Materials\Background.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="ES2Materials\EP_Cravers.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ES2Materials\EP_Cravers.xcf" />
+    <Resource Include="ES2Materials\EP_Horatio.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ES2Materials\EP_Horatio.xcf" />
+    <Resource Include="ES2Materials\EP_Lumeris.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ES2Materials\EP_Lumeris.xcf" />
+    <Resource Include="ES2Materials\EP_RiftBorn.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ES2Materials\EP_RiftBorn.xcf" />
+    <Resource Include="ES2Materials\EP_Sophons.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ES2Materials\EP_Sophons.xcf" />
+    <Resource Include="ES2Materials\EP_Unfallen.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ES2Materials\EP_Unfallen.xcf" />
+    <Resource Include="ES2Materials\EP_UnitedEmpire.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ES2Materials\EP_UnitedEmpire.xcf" />
+    <Resource Include="ES2Materials\EP_Vodyani.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ES2Materials\EP_Vodyani.xcf" />
     <Resource Include="ES2Materials\ES2_Logo.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -54,9 +102,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="ES2Materials\P1_Vodyani.bmp">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="ES2Materials\Portrait.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

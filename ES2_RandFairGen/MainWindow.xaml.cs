@@ -60,6 +60,13 @@ namespace ES2_RandFairGen
 
                 mainWindowAppStateModel.RightPanelState = MainWindowAppStateModel.UIElementState.Visible;
             }
+            else
+            {
+                Storyboard storyboard = (Storyboard)TryFindResource("RightPanelHide");
+                storyboard.Begin();
+
+                mainWindowAppStateModel.RightPanelState = MainWindowAppStateModel.UIElementState.Invisible;
+            }
         }
 
         private void MainGridExitButton_Click(object sender, RoutedEventArgs e)

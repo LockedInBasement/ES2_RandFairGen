@@ -195,17 +195,14 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="280"/>
+                    <ColumnDefinition Width="280"/>
+                    <ColumnDefinition Width="280"/>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+                </Grid.ColumnDefinitions> 
 
-                <Grid Grid.ColumnSpan="3" Grid.RowSpan="5">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="80*"/>
-                        <ColumnDefinition Width="175*"/>
-                    </Grid.ColumnDefinitions>
-                    <Image Source="/ES2Materials/Background.jpg" Stretch="UniformToFill" Grid.ColumnSpan="2" />
+                <Grid Grid.ColumnSpan="4" Grid.RowSpan="5">
+                    <Image Source="/ES2Materials/Background.jpg" Stretch="UniformToFill"/>
                 </Grid>
 
                 <Grid x:Name="TitleGrid" Grid.RowSpan="1" Grid.ColumnSpan="3">
@@ -237,19 +234,27 @@
                     <Grid.Effect>
                         <DropShadowEffect BlurRadius="20" Color="Black" ShadowDepth="1"/>
                     </Grid.Effect>
-                    <Image Source="ES2Materials/P1_UnitedEmpire.bmp" Stretch="UniformToFill"/>
+                    <Ellipse Height="120" Width="120" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="5 5" Stroke="White">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="ES2Materials/EP_UnitedEmpire.jpg" Stretch="UniformToFill" Viewport="0,0,1,1" Viewbox="0,0,1,1" TileMode="None"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
                     <StackPanel Orientation="Vertical" Margin="5 5 5 5" HorizontalAlignment="Left" Background="{DynamicResource MaterialDesignBody}" MinWidth="120" MinHeight="120">
                         <materialDesign:PackIcon Kind="SettingsApplications" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Height="100" Width="100"/>
                         <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="20" Text="United Empire" Foreground="White"/>
                         <Label x:Name="label" Content="Label"/>
                     </StackPanel>
                 </Grid>
-
+                
                 <Grid Margin="5 5 5 5" Grid.Row="2" Grid.Column="1">
                     <Grid.Effect>
                         <DropShadowEffect BlurRadius="20" Color="Black" ShadowDepth="2"/>
                     </Grid.Effect>
-                    <Image Source="/ES2Materials/P1_Cravers.bmp" Stretch="UniformToFill"/>
+                    <Ellipse Height="120" Width="120" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="5 5" Stroke="White">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="ES2Materials/EP_Cravers.jpg" Stretch="UniformToFill"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
                     <StackPanel Orientation="Vertical" Margin="5 5 5 5" HorizontalAlignment="Left" Background="{DynamicResource MaterialDesignBody}" MinWidth="120" MinHeight="120">
                         <materialDesign:PackIcon Kind="SettingsApplications" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Height="100" Width="100"/>
                         <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="20" Text="Cravers" Foreground="White"/>
@@ -260,7 +265,11 @@
                     <Grid.Effect>
                         <DropShadowEffect BlurRadius="20" Color="Black" ShadowDepth="2"/>
                     </Grid.Effect>
-                    <Image Source="/ES2Materials/P1_Sophons.bmp" Stretch="UniformToFill"/>
+                    <Ellipse Height="120" Width="120" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="5 5" Stroke="White">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="ES2Materials/EP_Sophons.jpg" Stretch="UniformToFill"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
                     <StackPanel Orientation="Vertical" Margin="5 5 5 5" HorizontalAlignment="Left" Background="{DynamicResource MaterialDesignBody}" MinWidth="120" MinHeight="120">
                         <materialDesign:PackIcon Kind="SettingsApplications" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Height="100" Width="100"/>
                         <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="20" Text="Sophons" Foreground="White"/>
@@ -271,7 +280,11 @@
                     <Grid.Effect>
                         <DropShadowEffect BlurRadius="20" Color="Black" ShadowDepth="2"/>
                     </Grid.Effect>
-                    <Image Source="/ES2Materials/P1_Lumeris.bmp" Stretch="UniformToFill"/>
+                    <Ellipse Height="120" Width="120" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="5 5" Stroke="White">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="ES2Materials/EP_Lumeris.jpg" Stretch="UniformToFill"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
                     <StackPanel Orientation="Vertical" Margin="5 5 5 5" HorizontalAlignment="Left" Background="{DynamicResource MaterialDesignBody}" MinWidth="120" MinHeight="120">
                         <materialDesign:PackIcon Kind="SettingsApplications" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Height="100" Width="100"/>
                         <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="20" Text="Lumeris" Foreground="White"/>
@@ -282,7 +295,11 @@
                     <Grid.Effect>
                         <DropShadowEffect BlurRadius="20" Color="Black" ShadowDepth="2"/>
                     </Grid.Effect>
-                    <Image Source="/ES2Materials/P1_Horatio.bmp" Stretch="UniformToFill"/>
+                    <Ellipse Height="120" Width="120" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="5 5" Stroke="White">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="ES2Materials/EP_Horatio.jpg" Stretch="UniformToFill"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
                     <StackPanel Orientation="Vertical" Margin="5 5 5 5" HorizontalAlignment="Left" Background="{DynamicResource MaterialDesignBody}" MinWidth="120" MinHeight="120">
                         <materialDesign:PackIcon Kind="SettingsApplications" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Height="100" Width="100"/>
                         <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="20" Text="Horatio" Foreground="White"/>
@@ -293,7 +310,11 @@
                     <Grid.Effect>
                         <DropShadowEffect BlurRadius="20" Color="Black" ShadowDepth="2"/>
                     </Grid.Effect>
-                    <Image Source="/ES2Materials/P1_Riftborn.bmp" Stretch="UniformToFill"/>
+                    <Ellipse Height="120" Width="120" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="5 5" Stroke="White">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="ES2Materials/EP_RiftBorn.jpg" Stretch="UniformToFill"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
                     <StackPanel Orientation="Vertical" Margin="5 5 5 5" HorizontalAlignment="Left" Background="{DynamicResource MaterialDesignBody}" MinWidth="120" MinHeight="120">
                         <materialDesign:PackIcon Kind="SettingsApplications" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Height="100" Width="100"/>
                         <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="20" Text="Riftborn" Foreground="White"/>
@@ -304,7 +325,11 @@
                     <Grid.Effect>
                         <DropShadowEffect BlurRadius="20" Color="Black" ShadowDepth="2"/>
                     </Grid.Effect>
-                    <Image Source="/ES2Materials/P1_Vodyani.bmp" Stretch="UniformToFill"/>
+                    <Ellipse Height="120" Width="120" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="5 5" Stroke="White">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="ES2Materials/EP_Vodyani.jpg" Stretch="UniformToFill"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
                     <StackPanel Orientation="Vertical" Margin="5 5 5 5" HorizontalAlignment="Left" Background="{DynamicResource MaterialDesignBody}" MinWidth="120" MinHeight="120">
                         <materialDesign:PackIcon Kind="SettingsApplications" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Height="100" Width="100"/>
                         <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="20" Text="Vodyani" Foreground="White"/>
@@ -315,7 +340,11 @@
                     <Grid.Effect>
                         <DropShadowEffect BlurRadius="20" Color="Black" ShadowDepth="2"/>
                     </Grid.Effect>
-                    <Image Source="/ES2Materials/P1_Unfallen.bmp" Stretch="UniformToFill"/>
+                    <Ellipse Height="120" Width="120" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="5 5" Stroke="White">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="ES2Materials/EP_Unfallen.jpg" Stretch="UniformToFill"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
                     <StackPanel Orientation="Vertical" Margin="5 5 5 5" HorizontalAlignment="Left" Background="{DynamicResource MaterialDesignBody}" MinWidth="120" MinHeight="120">
                         <materialDesign:PackIcon Kind="SettingsApplications" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Height="100" Width="100"/>
                         <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="20" Text="Unfallen" Foreground="White"/>
@@ -338,14 +367,9 @@
 
             <StackPanel x:Name="StackPanelInfo" Orientation="Vertical" RenderTransformOrigin="0.5,0.5">
                 <Grid x:Name="grid" Grid.Column="1" Background="#FF222E2C" RenderTransformOrigin="0.5,0.5">
+                    
                     <Image Height="150" VerticalAlignment="Top" Source="ES2Materials/ES2_Logo.jpg" Stretch="UniformToFill"/>
-                    <!--
-                <Ellipse Height="100" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="20 100" Stroke="White">
-                    <Ellipse.Fill>
-                        <ImageBrush ImageSource="ES2Materials/Portrait.jpg" Stretch="UniformToFill"/>
-                    </Ellipse.Fill>
-                </Ellipse>
-                    -->
+
                     <TextBlock Text="Info" Foreground="White" FontSize="32" FontFamily="Impact" Margin="10 100" VerticalAlignment="Top"/>
                     <StackPanel Margin="0 120 0 0">
                         <Grid Height="40" Margin="10 50 0 0">
