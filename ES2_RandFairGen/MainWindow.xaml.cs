@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ES2_RandFairGenLibrary.ES2_ExportModels;
+using ES2_RandFairGenLibrary.ES2_ApiModels;
 
 namespace ES2_RandFairGen
 {
@@ -22,31 +23,83 @@ namespace ES2_RandFairGen
     /// </summary>
     public partial class MainWindow : Window
     {
+        #region Init
+
         public MainWindow()
         {
             InitializeComponent();
+
+            //DI later -> for test code smell :P
+            CreateLibModels();
         }
 
-        private void ButtonExit_Click(object sender, RoutedEventArgs e)
+        private void CreateLibModels()
         {
-            Application.Current.Shutdown();
+            exportModFile = new ExportModFile();
+            mainWindowAppStateModel = new MainWindowAppStateModel();
         }
+
+        #endregion
+
+        #region MainGrid Buttons
 
         private void ButtonOptionsMenu_Click(object sender, RoutedEventArgs e)
         {
             Storyboard storyboard = (Storyboard)TryFindResource("SlideMainPage");
             storyboard.Begin();
+
+            mainWindowAppStateModel.LeftPanelState = MainWindowAppStateModel.UIElementState.Visible;
+        }
+
+        private void MainGridInfoButton_Click(object sender, RoutedEventArgs e)
+        {
+            if(mainWindowAppStateModel.RightPanelState == MainWindowAppStateModel.UIElementState.Invisible)
+            {
+                Storyboard storyboard = (Storyboard)TryFindResource("RightPanelShow");
+                storyboard.Begin();
+
+                mainWindowAppStateModel.RightPanelState = MainWindowAppStateModel.UIElementState.Visible;
+            }
+        }
+
+        private void MainGridExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        #endregion
+
+        #region RightPanel Buttons
+
+        private void ChangePathButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("To Do -> check board priority");
         }
 
         private void ExportDataToTxtButton_Click(object sender, RoutedEventArgs e)
         {
-            ExportModFile exportModFile = new ExportModFile(); 
+            exportModFile.Export();
+            MessageBox.Show("Exported - for now no dialog window - to do list ;)");
         }
 
-        private void ChangePathButton_Click(object sender, RoutedEventArgs e)
+        private void HidePanelButton_Click(object sender, RoutedEventArgs e)
         {
-            //To DO
+            if (mainWindowAppStateModel.RightPanelState == MainWindowAppStateModel.UIElementState.Visible)
+            {
+                Storyboard storyboard = (Storyboard)TryFindResource("RightPanelHide");
+                storyboard.Begin();
+
+                mainWindowAppStateModel.RightPanelState = MainWindowAppStateModel.UIElementState.Invisible;
+            }
         }
-        
+
+        #endregion
+
+        #region Data
+
+        ExportModFile exportModFile;
+        MainWindowAppStateModel mainWindowAppStateModel;
+
+        #endregion
     }
 }
