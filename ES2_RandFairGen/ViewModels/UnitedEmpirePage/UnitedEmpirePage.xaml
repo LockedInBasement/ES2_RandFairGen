@@ -1,0 +1,95 @@
+﻿<Window x:Class="ES2_RandFairGen.ViewModels.UnitedEmpirePage.UnitedEmpirePage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ES2_RandFairGen.ViewModels.UnitedEmpirePage"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="UnitedEmpirePage" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <!-- Background Image -->
+        <Grid Grid.ColumnSpan="4" Grid.RowSpan="5">
+            <Image Source="/ES2Materials/Background.jpg" Stretch="UniformToFill"/>
+        </Grid>
+
+        <!--Left Side-->
+        <TextBlock Text="United Empire" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Grid.RowSpan="1" Grid.ColumnSpan="2"
+                   FontSize="24" FontWeight="Bold"  Margin="5 5 5 5"/>
+
+        <StackPanel x:Name="MenuBarStackPanel" Orientation="Horizontal" Grid.Row="0" Grid.Column="0">
+
+            <Button x:Name="UnitedEmpireReturnButton" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" 
+                            BorderBrush="{x:Null}" Margin="5" Click="UnitedEmpireReturnButton_Click">
+                <materialDesign:PackIcon Kind="ArrowBack" Foreground="#DDFFFFFF"/>
+            </Button>
+            
+        </StackPanel>
+
+        <Grid Grid.Column="0" Grid.Row="1">
+            <Image Source="/ES2Materials/FullPerson/FP_UnitedEmpire.jpg" Stretch="UniformToFill"/>
+            <TextBlock Text="Difficulty Level : 100% " VerticalAlignment="Bottom" HorizontalAlignment="Center" Foreground="White" FontSize="24" FontWeight="Bold" Margin="5 5 5 5"/>
+        </Grid>
+
+        <!--Right side-->
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Row 0 -->
+            <TextBlock Text="Base Food Supply" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" FontWeight="Bold"  Margin="5"/>
+            <TextBox x:Name="InputFoodLevel" PreviewTextInput="ValidateText" Grid.Row="0" Grid.Column="1" Text="0" Foreground="White" FontSize="16" FontWeight="Bold"  Margin="5"/>
+
+            <!-- Row 1 -->
+            <TextBlock Text="Base Infrastucture Output" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" FontWeight="Bold"  Margin="5"/>
+            <TextBox x:Name="InputInfrastuctureLevel" Grid.Row="1" Grid.Column="1" Text="0" Foreground="White" FontSize="16" FontWeight="Bold"  Margin="5"/>
+            
+            <!-- Row 2 -->
+            <TextBlock Text="Base Dust Amount" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" FontWeight="Bold"  Margin="5"/>
+            <TextBox x:Name="InputDustLevel" Grid.Row="2" Grid.Column="1" Text="100" Foreground="White" FontSize="16" FontWeight="Bold"  Margin="5"/>
+            
+            <!-- Row 3 -->
+            <TextBlock Text="Base Research Facilities" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" FontWeight="Bold"  Margin="5"/>
+            <TextBox x:Name="InputResarchLevel" Grid.Row="3" Grid.Column="1" Text="0" Foreground="White" FontSize="16" FontWeight="Bold"  Margin="5"/>
+
+            <!-- Row 4 -->
+            <TextBlock Text="Staring Generals Number" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" FontWeight="Bold"  Margin="5"/>
+            <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="1">
+                <RadioButton GroupName="Generals" Content="1" IsChecked="True" Foreground="White" FontSize="16" FontWeight="Bold"  Margin="5"/>
+                <RadioButton GroupName="Generals" Content="2" IsChecked="False" Foreground="White" FontSize="16" FontWeight="Bold"  Margin="5"/>
+                <RadioButton GroupName="Generals" Content="3" IsChecked="False" Foreground="White" FontSize="16" FontWeight="Bold"  Margin="5"/>
+            </StackPanel>
+
+            <!-- Row 5 Save -->
+            <TextBlock Text="Restore Defaults Settings" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" FontWeight="Bold"  Margin="5"/>
+            <materialDesign:PackIcon Kind="Restore"  Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" Foreground="White" Height="30" Width="30" MouseDown="RestoreDefaults"/>
+            
+            <!-- Row 6 Save -->
+            <TextBlock Text="Save Settings" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="16" FontWeight="Bold"  Margin="5"/>
+            <materialDesign:PackIcon Kind="FileExportOutline"  Grid.Row="6" Grid.Column="1" HorizontalAlignment="Left" Foreground="White" Height="30" Width="30" MouseDown="OverwriteDefaults"/>
+            
+        </Grid>
+        
+    </Grid>
+</Window>

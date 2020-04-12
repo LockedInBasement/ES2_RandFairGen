@@ -8,6 +8,14 @@
 
   <ItemGroup>
     <None Remove="ES2Materials\Background.jpg" />
+    <None Remove="ES2Materials\EllipsePortrait\EP_Cravers.jpg" />
+    <None Remove="ES2Materials\EllipsePortrait\EP_Horatio.jpg" />
+    <None Remove="ES2Materials\EllipsePortrait\EP_Lumeris.jpg" />
+    <None Remove="ES2Materials\EllipsePortrait\EP_RiftBorn.jpg" />
+    <None Remove="ES2Materials\EllipsePortrait\EP_Sophons.jpg" />
+    <None Remove="ES2Materials\EllipsePortrait\EP_Unfallen.jpg" />
+    <None Remove="ES2Materials\EllipsePortrait\EP_UnitedEmpire.jpg" />
+    <None Remove="ES2Materials\EllipsePortrait\EP_Vodyani.jpg" />
     <None Remove="ES2Materials\EP_Cravers.jpg" />
     <None Remove="ES2Materials\EP_Cravers.xcf" />
     <None Remove="ES2Materials\EP_Horatio.jpg" />
@@ -25,6 +33,22 @@
     <None Remove="ES2Materials\EP_Vodyani.jpg" />
     <None Remove="ES2Materials\EP_Vodyani.xcf" />
     <None Remove="ES2Materials\ES2_Logo.jpg" />
+    <None Remove="ES2Materials\FP_Cravers.jpg" />
+    <None Remove="ES2Materials\FP_Horatio.jpg" />
+    <None Remove="ES2Materials\FP_Lumeris.jpg" />
+    <None Remove="ES2Materials\FP_RiftBorn.jpg" />
+    <None Remove="ES2Materials\FP_Sophons.jpg" />
+    <None Remove="ES2Materials\FP_Unfallen.jpg" />
+    <None Remove="ES2Materials\FP_UnitedEmpire.jpg" />
+    <None Remove="ES2Materials\FP_Vodyani.jpg" />
+    <None Remove="ES2Materials\FullPerson\FP_Cravers.jpg" />
+    <None Remove="ES2Materials\FullPerson\FP_Horatio.jpg" />
+    <None Remove="ES2Materials\FullPerson\FP_Lumeris.jpg" />
+    <None Remove="ES2Materials\FullPerson\FP_RiftBorn.jpg" />
+    <None Remove="ES2Materials\FullPerson\FP_Sophons.jpg" />
+    <None Remove="ES2Materials\FullPerson\FP_Unfallen.jpg" />
+    <None Remove="ES2Materials\FullPerson\FP_UnitedEmpire.jpg" />
+    <None Remove="ES2Materials\FullPerson\FP_Vodyani.jpg" />
     <None Remove="ES2Materials\P1_Cravers.bmp" />
     <None Remove="ES2Materials\P1_Horatio.bmp" />
     <None Remove="ES2Materials\P1_Lumeris.bmp" />
@@ -34,50 +58,69 @@
     <None Remove="ES2Materials\P1_UnitedEmpire.bmp" />
     <None Remove="ES2Materials\P1_Vodyani.bmp" />
     <None Remove="ES2Materials\Portrait.jpg" />
+    <None Remove="ViewModels\UnitedEmpirePage\FP_UnitedEmpire.jpg" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MaterialDesignColors" Version="1.2.2" />
     <PackageReference Include="MaterialDesignThemes" Version="3.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.3" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.3" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="ES2Materials\Background.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="ES2Materials\EP_Cravers.jpg">
+    <Resource Include="ES2Materials\EllipsePortrait\EP_Cravers.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="ES2Materials\EP_Cravers.xcf" />
-    <Resource Include="ES2Materials\EP_Horatio.jpg">
+    <Resource Include="ES2Materials\EllipsePortrait\EP_Horatio.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="ES2Materials\EP_Horatio.xcf" />
-    <Resource Include="ES2Materials\EP_Lumeris.jpg">
+    <Resource Include="ES2Materials\EllipsePortrait\EP_Lumeris.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="ES2Materials\EP_Lumeris.xcf" />
-    <Resource Include="ES2Materials\EP_RiftBorn.jpg">
+    <Resource Include="ES2Materials\EllipsePortrait\EP_RiftBorn.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="ES2Materials\EP_RiftBorn.xcf" />
-    <Resource Include="ES2Materials\EP_Sophons.jpg">
+    <Resource Include="ES2Materials\EllipsePortrait\EP_Sophons.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="ES2Materials\EP_Sophons.xcf" />
-    <Resource Include="ES2Materials\EP_Unfallen.jpg">
+    <Resource Include="ES2Materials\EllipsePortrait\EP_Unfallen.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="ES2Materials\EP_Unfallen.xcf" />
-    <Resource Include="ES2Materials\EP_UnitedEmpire.jpg">
+    <Resource Include="ES2Materials\EllipsePortrait\EP_UnitedEmpire.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="ES2Materials\EP_UnitedEmpire.xcf" />
-    <Resource Include="ES2Materials\EP_Vodyani.jpg">
+    <Resource Include="ES2Materials\EllipsePortrait\EP_Vodyani.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="ES2Materials\EP_Vodyani.xcf" />
     <Resource Include="ES2Materials\ES2_Logo.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ES2Materials\FullPerson\FP_Cravers.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ES2Materials\FullPerson\FP_Horatio.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ES2Materials\FullPerson\FP_Lumeris.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ES2Materials\FullPerson\FP_RiftBorn.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ES2Materials\FullPerson\FP_Sophons.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ES2Materials\FullPerson\FP_Unfallen.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ES2Materials\FullPerson\FP_UnitedEmpire.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ES2Materials\FullPerson\FP_Vodyani.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="ES2Materials\P1_Cravers.bmp">
@@ -107,11 +150,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModels\" />
+    <ProjectReference Include="..\ES2_RandFairGenLibrary\ES2_RandFairGenLibrary.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ES2_RandFairGenLibrary\ES2_RandFairGenLibrary.csproj" />
+    <Folder Include="ViewModels\CraversPage\" />
+    <Folder Include="ViewModels\LumerisPage\" />
+    <Folder Include="ViewModels\HoratioPage\" />
+    <Folder Include="ViewModels\UnfallenPage\" />
+    <Folder Include="ViewModels\RiftbornPage\" />
+    <Folder Include="ViewModels\VodyaniPage\" />
+    <Folder Include="ViewModels\SophonsPage\" />
   </ItemGroup>
 
 </Project>

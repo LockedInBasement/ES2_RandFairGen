@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ES2_RandFairGen"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="MainWindow" Height="540" Width="960" WindowStartupLocation="CenterScreen" WindowStyle="None">
+        Title="MainWindow" Height="540" Width="960" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
     <!--Animations-->
     <Window.Resources>
         <Storyboard x:Key="SlideMainPage">
@@ -230,17 +230,17 @@
   
                 </Grid>
 
-                <Grid Margin="5 5 5 5" Grid.Row="2" Grid.Column="0">
+                <Grid Margin="5 5 5 5" Grid.Row="2" Grid.Column="0" MouseDown="UnitedEmpireButton_Click">
                     <Grid.Effect>
                         <DropShadowEffect BlurRadius="20" Color="Black" ShadowDepth="1"/>
                     </Grid.Effect>
                     <Ellipse Height="120" Width="120" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="5 5" Stroke="White">
                         <Ellipse.Fill>
-                            <ImageBrush ImageSource="ES2Materials/EP_UnitedEmpire.jpg" Stretch="UniformToFill" Viewport="0,0,1,1" Viewbox="0,0,1,1" TileMode="None"/>
+                            <ImageBrush ImageSource="ES2Materials/EllipsePortrait/EP_UnitedEmpire.jpg" Stretch="UniformToFill" Viewport="0,0,1,1" Viewbox="0,0,1,1" TileMode="None"/>
                         </Ellipse.Fill>
                     </Ellipse>
                     <StackPanel Orientation="Vertical" Margin="5 5 5 5" HorizontalAlignment="Left" Background="{DynamicResource MaterialDesignBody}" MinWidth="120" MinHeight="120">
-                        <materialDesign:PackIcon Kind="SettingsApplications" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Height="100" Width="100"/>
+                        <materialDesign:PackIcon Kind="SettingsApplications" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Height="100" Width="100" />
                         <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="20" Text="United Empire" Foreground="White"/>
                         <Label x:Name="label" Content="Label"/>
                     </StackPanel>
@@ -252,7 +252,7 @@
                     </Grid.Effect>
                     <Ellipse Height="120" Width="120" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="5 5" Stroke="White">
                         <Ellipse.Fill>
-                            <ImageBrush ImageSource="ES2Materials/EP_Cravers.jpg" Stretch="UniformToFill"/>
+                            <ImageBrush ImageSource="ES2Materials/EllipsePortrait/EP_Cravers.jpg" Stretch="UniformToFill"/>
                         </Ellipse.Fill>
                     </Ellipse>
                     <StackPanel Orientation="Vertical" Margin="5 5 5 5" HorizontalAlignment="Left" Background="{DynamicResource MaterialDesignBody}" MinWidth="120" MinHeight="120">
@@ -267,7 +267,7 @@
                     </Grid.Effect>
                     <Ellipse Height="120" Width="120" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="5 5" Stroke="White">
                         <Ellipse.Fill>
-                            <ImageBrush ImageSource="ES2Materials/EP_Sophons.jpg" Stretch="UniformToFill"/>
+                            <ImageBrush ImageSource="ES2Materials/EllipsePortrait/EP_Sophons.jpg" Stretch="UniformToFill"/>
                         </Ellipse.Fill>
                     </Ellipse>
                     <StackPanel Orientation="Vertical" Margin="5 5 5 5" HorizontalAlignment="Left" Background="{DynamicResource MaterialDesignBody}" MinWidth="120" MinHeight="120">
@@ -282,7 +282,7 @@
                     </Grid.Effect>
                     <Ellipse Height="120" Width="120" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="5 5" Stroke="White">
                         <Ellipse.Fill>
-                            <ImageBrush ImageSource="ES2Materials/EP_Lumeris.jpg" Stretch="UniformToFill"/>
+                            <ImageBrush ImageSource="ES2Materials/EllipsePortrait/EP_Lumeris.jpg" Stretch="UniformToFill"/>
                         </Ellipse.Fill>
                     </Ellipse>
                     <StackPanel Orientation="Vertical" Margin="5 5 5 5" HorizontalAlignment="Left" Background="{DynamicResource MaterialDesignBody}" MinWidth="120" MinHeight="120">
@@ -297,7 +297,7 @@
                     </Grid.Effect>
                     <Ellipse Height="120" Width="120" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="5 5" Stroke="White">
                         <Ellipse.Fill>
-                            <ImageBrush ImageSource="ES2Materials/EP_Horatio.jpg" Stretch="UniformToFill"/>
+                            <ImageBrush ImageSource="ES2Materials/EllipsePortrait/EP_Horatio.jpg" Stretch="UniformToFill"/>
                         </Ellipse.Fill>
                     </Ellipse>
                     <StackPanel Orientation="Vertical" Margin="5 5 5 5" HorizontalAlignment="Left" Background="{DynamicResource MaterialDesignBody}" MinWidth="120" MinHeight="120">
@@ -312,7 +312,7 @@
                     </Grid.Effect>
                     <Ellipse Height="120" Width="120" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="5 5" Stroke="White">
                         <Ellipse.Fill>
-                            <ImageBrush ImageSource="ES2Materials/EP_RiftBorn.jpg" Stretch="UniformToFill"/>
+                            <ImageBrush ImageSource="ES2Materials/EllipsePortrait/EP_RiftBorn.jpg" Stretch="UniformToFill"/>
                         </Ellipse.Fill>
                     </Ellipse>
                     <StackPanel Orientation="Vertical" Margin="5 5 5 5" HorizontalAlignment="Left" Background="{DynamicResource MaterialDesignBody}" MinWidth="120" MinHeight="120">
@@ -327,7 +327,7 @@
                     </Grid.Effect>
                     <Ellipse Height="120" Width="120" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="5 5" Stroke="White">
                         <Ellipse.Fill>
-                            <ImageBrush ImageSource="ES2Materials/EP_Vodyani.jpg" Stretch="UniformToFill"/>
+                            <ImageBrush ImageSource="ES2Materials/EllipsePortrait/EP_Vodyani.jpg" Stretch="UniformToFill"/>
                         </Ellipse.Fill>
                     </Ellipse>
                     <StackPanel Orientation="Vertical" Margin="5 5 5 5" HorizontalAlignment="Left" Background="{DynamicResource MaterialDesignBody}" MinWidth="120" MinHeight="120">
@@ -342,7 +342,7 @@
                     </Grid.Effect>
                     <Ellipse Height="120" Width="120" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="5 5" Stroke="White">
                         <Ellipse.Fill>
-                            <ImageBrush ImageSource="ES2Materials/EP_Unfallen.jpg" Stretch="UniformToFill"/>
+                            <ImageBrush ImageSource="ES2Materials/EllipsePortrait/EP_Unfallen.jpg" Stretch="UniformToFill"/>
                         </Ellipse.Fill>
                     </Ellipse>
                     <StackPanel Orientation="Vertical" Margin="5 5 5 5" HorizontalAlignment="Left" Background="{DynamicResource MaterialDesignBody}" MinWidth="120" MinHeight="120">
@@ -355,7 +355,7 @@
 
         </Grid>
 
-        <Grid x:Name="RightPanel" Width="250" HorizontalAlignment="Right" RenderTransformOrigin="0.5,0.5">
+        <Grid x:Name="RightPanel" HorizontalAlignment="Right" RenderTransformOrigin="0.5,0.5">
             <Grid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -364,79 +364,73 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </Grid.RenderTransform>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+            </Grid.ColumnDefinitions>
+            
+            <Image Grid.Row="0" VerticalAlignment="Top" Source="ES2Materials/ES2_Logo.jpg" Stretch="UniformToFill"/>
+            <TextBlock Grid.Row="0" Text="Info" Foreground="White" FontSize="32" FontFamily="Impact" Margin="10" VerticalAlignment="Top"/>
 
-            <StackPanel x:Name="StackPanelInfo" Orientation="Vertical" RenderTransformOrigin="0.5,0.5">
-                <Grid x:Name="grid" Grid.Column="1" Background="#FF222E2C" RenderTransformOrigin="0.5,0.5">
-                    
-                    <Image Height="150" VerticalAlignment="Top" Source="ES2Materials/ES2_Logo.jpg" Stretch="UniformToFill"/>
+            <StackPanel x:Name="StackPanelInfo" Grid.Row="1" Orientation="Vertical" RenderTransformOrigin="0.5,0.5" Background="#FF222E2C">
+                <StackPanel Grid.Row="1">
+                    <Grid Height="40" Margin="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="Folder with mod files" FontSize="10" VerticalAlignment="Top" Foreground="White" Margin="2" />
+                        <TextBlock Text="Folder with dif ratio" FontSize="10" VerticalAlignment="Bottom" Foreground="White" Grid.Row="1" Margin="2"/>
 
-                    <TextBlock Text="Info" Foreground="White" FontSize="32" FontFamily="Impact" Margin="10 100" VerticalAlignment="Top"/>
-                    <StackPanel Margin="0 120 0 0">
-                        <Grid Height="40" Margin="10 50 0 0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="100"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="20"/>
-                                <RowDefinition Height="20"/>
-                            </Grid.RowDefinitions>
-                            <TextBlock Text="Folder with mod files" FontSize="10" VerticalAlignment="Top" Foreground="White" Margin="2" />
-                            <TextBlock Text="Folder with dif ratio" FontSize="10" VerticalAlignment="Bottom" Foreground="White" Grid.Row="1" Margin="2"/>
+                        <TextBlock Text="\bin\Debug\netcoreapp3.1" FontSize="10" VerticalAlignment="Top" Foreground="White" Grid.Column="1" Margin="2"/>
+                        <TextBlock Text="\bin\Debug\netcoreapp3.1" FontSize="10" VerticalAlignment="Bottom" Foreground="White" Grid.Row="1" Grid.Column="1" Margin="2"/>
+                    </Grid>
 
-                            <TextBlock Text="\bin\Debug\netcoreapp3.1" FontSize="10" VerticalAlignment="Top" Foreground="White" Grid.Column="1" Margin="2"/>
-                            <TextBlock Text="\bin\Debug\netcoreapp3.1" FontSize="10" VerticalAlignment="Bottom" Foreground="White" Grid.Row="1" Grid.Column="1" Margin="2"/>
-                        </Grid>
-
-                        <TextBlock TextWrapping="Wrap" Margin="10" Foreground="White">To Edit race just click on cog icon next to picture. To edit advanced settings hover mouse on left edge of app and 
+                    <TextBlock TextWrapping="Wrap" Margin="10" Foreground="White">To Edit race just click on cog icon next to picture. To edit advanced settings hover mouse on left edge of app and 
                         choose specyfic section. Default path with generated files are stored in location shown above. Please, be aware that app only generates additive code (do not try to 
                         overwrite base files - just copy and add what is generated as new file to game mod folder).</TextBlock>
 
-                        <!--Export and Path Buttons-->
-                        <Grid Height="60" Margin="10 0 0 0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="30"/>
-                                <RowDefinition Height="30"/>
-                            </Grid.RowDefinitions>
+                    <!--Export and Path Buttons-->
+                    <Grid Height="60" Margin="10 0 0 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                        </Grid.RowDefinitions>
 
-                            <TextBlock Text="ChangePath" FontSize="10" VerticalAlignment="Bottom" Foreground="White" Margin="5" />
-                            <TextBlock Text="Export ModData to txt" FontSize="10" VerticalAlignment="Bottom" Foreground="White" Grid.Row="1" Margin="5"/>
+                        <TextBlock Text="ChangePath" FontSize="10" VerticalAlignment="Bottom" Foreground="White" Margin="5" />
+                        <TextBlock Text="Export ModData to txt" FontSize="10" VerticalAlignment="Bottom" Foreground="White" Grid.Row="1" Margin="5"/>
 
-                            <Button x:Name="ChangePathButton" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="1" Width="30" Height="30" 
+                        <Button x:Name="ChangePathButton" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="1" Width="30" Height="30" 
                                 Padding="0" Background="{x:Null}" BorderBrush="{x:Null}"  Click="ChangePathButton_Click">
-                                <materialDesign:PackIcon Kind="Edit" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Height="20" Width="20"/>
-                            </Button>
-
-                            <Button x:Name="ExportDataToTxtButton" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="1" Width="30" Height="30" 
-                                Padding="0" Background="{x:Null}" BorderBrush="{x:Null}"  Click="ExportDataToTxtButton_Click">
-                                <materialDesign:PackIcon Kind="FileExportOutline" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Height="20" Width="20"/>
-                            </Button>
-                        </Grid>
-
-                        <Button x:Name="HidePanelButton" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="30" Height="30" 
-                                Padding="0" Background="{x:Null}" BorderBrush="{x:Null}"  Click="HidePanelButton_Click" Margin="0 40 0 0" >
-                            <materialDesign:PackIcon Kind="ArrowForward" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Height="20" Width="20"/>
+                            <materialDesign:PackIcon Kind="Edit" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Height="20" Width="20"/>
                         </Button>
 
-                    </StackPanel>
-                </Grid>
-                
-            </StackPanel>
+                        <Button x:Name="ExportDataToTxtButton" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="1" Width="30" Height="30" 
+                                Padding="0" Background="{x:Null}" BorderBrush="{x:Null}"  Click="ExportDataToTxtButton_Click">
+                            <materialDesign:PackIcon Kind="FileExportOutline" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Height="20" Width="20"/>
+                        </Button>
+                    </Grid>
 
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" Height="40" Width="240" Margin="0,10,10,0" d:IsHidden="True">
-                <!--<Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}">
-                <materialDesign:PackIcon Kind="Settings" Foreground="#DDFFFFFF" Width="20" Height="20"/>
-            </Button>
-                <Button x:Name="RightPanelExitButton" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}"
-                     Click="ButtonExit_Click">
-                    <materialDesign:PackIcon Kind="Power" Width="30" Height="30" Foreground="#DDFFFFFF"/>
-                </Button>
-                -->
+                    <Button x:Name="HidePanelButton" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="30" Height="30" 
+                                Padding="0" Background="{x:Null}" BorderBrush="{x:Null}"  Click="HidePanelButton_Click" Margin="0 40 0 0" >
+                        <materialDesign:PackIcon Kind="ArrowForward" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Height="20" Width="20"/>
+                    </Button>
+
+                </StackPanel>
             </StackPanel>
+            
         </Grid>
 
     </Grid>
