@@ -15,11 +15,11 @@ namespace ES2_RandFairGenLibrary.ES2_ApiModels
 
         protected void SetRaceDefaultValues() 
         {
-            FoodSupply = BaseFoodSupply;
-            InfrastructureOutput = BaseInfrastructureOutput;
-            DustAmount = BaseDustAmount;
-            ResarchFacilities = BaseResarchFacilities;
-            GeneralsNumber = BaseGeneralsNumber;
+            FoodSupply = baseFoodSupply;
+            InfrastructureOutput = baseInfrastructureOutput;
+            DustAmount = baseDustAmount;
+            ResarchFacilities = baseResarchFacilities;
+            GeneralsNumber = baseGeneralsNumber;
         }
 
         public void RestoreDefaults()
@@ -40,18 +40,26 @@ namespace ES2_RandFairGenLibrary.ES2_ApiModels
         private string infrastructureOutput = "333";
         private string dustAmount = "333";
         private string resarchFacilities = "333";
-        private string generalsNumber = "1";
+        private string generalsNumber = "333";
+        private string civilizationName = "Unknown";
 
+        public string CivilizationName { get => civilizationName; set => civilizationName = value; }
         public string FoodSupply { get => foodSupply; set => foodSupply = value; }
         public string InfrastructureOutput { get => infrastructureOutput; set => infrastructureOutput = value; }
         public string DustAmount { get => dustAmount; set => dustAmount = value; }
         public string ResarchFacilities { get => resarchFacilities; set => resarchFacilities = value; }
         public string GeneralsNumber { get => generalsNumber; set => generalsNumber = value; }
+  
+        private string baseFoodSupply = "333";
+        private string baseInfrastructureOutput = "333";
+        private string baseDustAmount = "333";
+        private string baseResarchFacilities = "333";
+        private string baseGeneralsNumber = "333";
 
-        public string BaseFoodSupply = "333";
-        public string BaseInfrastructureOutput = "333";
-        public string BaseDustAmount = "333";
-        public string BaseResarchFacilities = "333";
-        public string BaseGeneralsNumber = "1";
+        public string BaseFoodSupply { get => baseFoodSupply; set => baseFoodSupply = value; }
+        public string BaseInfrastructureOutput { get => baseInfrastructureOutput; set => baseInfrastructureOutput = value; }
+        public string BaseDustAmount { get => baseDustAmount; set => baseDustAmount = value; }
+        public string BaseResarchFacilities { get => baseResarchFacilities; set => baseResarchFacilities = value; }
+        public string BaseGeneralsNumber { get => baseGeneralsNumber; set => baseGeneralsNumber = value; }
     }
 }

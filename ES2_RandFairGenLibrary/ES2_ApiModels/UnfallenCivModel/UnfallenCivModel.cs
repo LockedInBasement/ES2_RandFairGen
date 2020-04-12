@@ -4,12 +4,13 @@ using System.Text;
 
 namespace ES2_RandFairGenLibrary.ES2_ApiModels.UnfallenCivModel
 {
-    public class UnfallenCivModel : BaseCivModel
+    public class UnfallenCivModel : BaseCivModel, IUnfallenCivModel
     {
         public UnfallenCivModel() { }
 
         protected override void SetRaceBaseValues()
         {
+            CivilizationName = UnfallenCivilizationName;
             BaseFoodSupply = UnfallenBaseFoodSupply;
             BaseInfrastructureOutput = UnfallenBaseInfrastructureOutput;
             BaseDustAmount = UnfallenBaseDustAmount;
@@ -17,7 +18,10 @@ namespace ES2_RandFairGenLibrary.ES2_ApiModels.UnfallenCivModel
             BaseGeneralsNumber = UnfallenBaseGeneralsNumber;
         }
 
-        //change cost of vine ship!
+        //change cost of vine ship
+        public void ChangeVineShipModuleCost() { }
+
+        public static readonly string UnfallenCivilizationName = "Unfallen";
         public static readonly string UnfallenBaseFoodSupply = "0";
         public static readonly string UnfallenBaseInfrastructureOutput = "0";
         public static readonly string UnfallenBaseDustAmount = "100";

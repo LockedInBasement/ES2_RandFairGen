@@ -4,12 +4,13 @@ using System.Text;
 
 namespace ES2_RandFairGenLibrary.ES2_ApiModels.VodyaniCivModel
 {
-    public class VodyaniCivModel : BaseCivModel
+    public class VodyaniCivModel : BaseCivModel, IVodyaniCivModel
     {
         public VodyaniCivModel() { }
 
         protected override void SetRaceBaseValues()
         {
+            CivilizationName = VodyaniCivilizationName;
             BaseFoodSupply = VodyaniBaseFoodSupply;
             BaseInfrastructureOutput = VodyaniBaseInfrastructureOutput;
             BaseDustAmount = VodyaniBaseDustAmount;
@@ -17,7 +18,10 @@ namespace ES2_RandFairGenLibrary.ES2_ApiModels.VodyaniCivModel
             BaseGeneralsNumber = VodyaniBaseGeneralsNumber;
         }
 
-        //mothership modules add!
+        //race specyfic features:
+        public void MothershipModuleBaseValue() { }
+
+        public static readonly string VodyaniCivilizationName = "Vodyani";
         public static readonly string VodyaniBaseFoodSupply = "0";
         public static readonly string VodyaniBaseInfrastructureOutput = "0";
         public static readonly string VodyaniBaseDustAmount = "200";

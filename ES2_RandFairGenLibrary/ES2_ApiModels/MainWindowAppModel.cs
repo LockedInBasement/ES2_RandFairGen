@@ -2,15 +2,34 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
-using ES2_RandFairGenLibrary.ES2_ApiModels.UnitedEmpirePage;
 
 namespace ES2_RandFairGenLibrary.ES2_ApiModels
 {
     public class MainWindowAppModel : IMainWindowAppModel
     {
-        public MainWindowAppModel(IBaseCivModel unitedEmpireCivModel)
+        public MainWindowAppModel(IBaseCivModel craversCivModel, IBaseCivModel horatioCivModel, IBaseCivModel lumerisCivModel, IBaseCivModel riftbornCivModel, IBaseCivModel sophonsCivModel,
+            IBaseCivModel unfallenCivModel, IBaseCivModel unitedEmpireCivModel, IBaseCivModel vodyaniCivModel)
         {
+            this.craversCivModel = craversCivModel;
+            this.horatioCivModel = horatioCivModel;
+            this.lumerisCivModel = lumerisCivModel;
+            this.riftbornCivModel = riftbornCivModel;
+            this.sophonsCivModel = sophonsCivModel;
+            this.unfallenCivModel = unfallenCivModel;
             this.unitedEmpireCivModel = unitedEmpireCivModel;
+            this.vodyaniCivModel = vodyaniCivModel;
+
+            streamWriter = new StreamWriter("ES2_ModChange.txt");
+            
+            civModels = new List<IBaseCivModel>();
+            civModels.Add(craversCivModel);
+            civModels.Add(horatioCivModel);
+            civModels.Add(lumerisCivModel);
+            civModels.Add(riftbornCivModel);
+            civModels.Add(sophonsCivModel);
+            civModels.Add(unfallenCivModel);
+            civModels.Add(unitedEmpireCivModel);
+            civModels.Add(vodyaniCivModel);
         }
 
         public void Overwrite()
@@ -20,32 +39,30 @@ namespace ES2_RandFairGenLibrary.ES2_ApiModels
 
         public void Export()
         {
-            StreamWriter streamWriter = new StreamWriter("ES2_ModChange.txt");
-
-            ExportFileText = new string(
-               $"Cravers EmpireMoney={CraversEmpireMoney} \n" +
-               $"Sophons EmpireMoney={SophonsEmpireMoney} \n" +
-               $"UnitedEmpire EmpireMoney={UnitedEmpireEmpireMoney} \n" +
-               $"Horatio EmpireMoney={HoratioEmpireMoney} \n" +
-               $"RiftBorn EmpireMoney={RiftBornEmpireMoney} \n" +
-               $"Vodyani EmpireMoney={VodyaniEmpireMoney} \n" +
-               $"Lumeris EmpireMoney={LumerisEmpireMoney} \n" +
-               $"Unfallens EmpireMoney={UnfallensEmpireMoney} \n");
-
-            streamWriter.Write(ExportFileText);
+            streamWriter.Write(BuildExporText());
             streamWriter.Close();
         }
 
-        string CraversEmpireMoney = "50";
-        string SophonsEmpireMoney = "100";
-        string UnitedEmpireEmpireMoney = "200";
-        string HoratioEmpireMoney = "100";
-        string RiftBornEmpireMoney = "100";
-        string VodyaniEmpireMoney = "150";
-        string LumerisEmpireMoney = "350";
-        string UnfallensEmpireMoney = "150";
+        string BuildExporText()
+        {
+            string textToExport = string.Empty;
 
-        string ExportFileText;
+            foreach (IBaseCivModel civModel in civModels)
+            {
+                textToExport = textToExport + $"{civModel.CivilizationName} \n" +
+                $"FoodSupply = {civModel.FoodSupply} \n" +
+                $"InfrastructureOutput = {civModel.InfrastructureOutput} \n" +
+                $"DustAmount = {civModel.DustAmount} \n" +
+                $"ResarchFacilities = {civModel.ResarchFacilities} \n" +
+                $"GeneralsNumber = {civModel.GeneralsNumber} \n\n";
+            }
+
+            return textToExport;
+        }
+
+
+        StreamWriter streamWriter;
+        List<IBaseCivModel> civModels;
 
         private IBaseCivModel craversCivModel;
         private IBaseCivModel horatioCivModel;

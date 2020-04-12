@@ -2,6 +2,7 @@
 {
     public interface IBaseCivModel
     {
+        string CivilizationName { get; set; }
         string DustAmount { get; set; }
         string FoodSupply { get; set; }
         string InfrastructureOutput { get; set; }

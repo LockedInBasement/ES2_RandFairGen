@@ -4,12 +4,13 @@ using System.Text;
 
 namespace ES2_RandFairGenLibrary.ES2_ApiModels.RiftbornCivModel
 {
-    class RiftbornCivModel : BaseCivModel
+    public class RiftbornCivModel : BaseCivModel, IRiftbornCivModel
     {
         public RiftbornCivModel() { }
 
         protected override void SetRaceBaseValues()
         {
+            CivilizationName = RiftbornCivilizationName;
             BaseFoodSupply = RiftbornBaseFoodSupply;
             BaseInfrastructureOutput = RiftbornBaseInfrastructureOutput;
             BaseDustAmount = RiftbornBaseDustAmount;
@@ -17,7 +18,9 @@ namespace ES2_RandFairGenLibrary.ES2_ApiModels.RiftbornCivModel
             BaseGeneralsNumber = RiftbornBaseGeneralsNumber;
         }
 
-        //Consider creating additional manpower!
+        public void IncereaseManpowerCreationFactor() { }
+
+        public static readonly string RiftbornCivilizationName = "Riftborn";
         public static readonly string RiftbornBaseFoodSupply = "0";
         public static readonly string RiftbornBaseInfrastructureOutput = "0";
         public static readonly string RiftbornBaseDustAmount = "250";

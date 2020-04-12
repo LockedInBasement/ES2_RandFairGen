@@ -17,7 +17,15 @@ using ES2_RandFairGenLibrary.ES2_ApiModels;
 using ES2_RandFairGen.ViewModels.UnitedEmpirePage;
 using Microsoft.Extensions.DependencyInjection;
 using System.Text.RegularExpressions;
-using ES2_RandFairGenLibrary.ES2_ApiModels.UnitedEmpirePage;
+using System.Diagnostics;
+using ES2_RandFairGenLibrary.ES2_ApiModels.UnitedEmpireCivModel;
+using ES2_RandFairGenLibrary.ES2_ApiModels.CraversCivModel;
+using ES2_RandFairGenLibrary.ES2_ApiModels.HoratioCivModel;
+using ES2_RandFairGenLibrary.ES2_ApiModels.LumerisCivModel;
+using ES2_RandFairGenLibrary.ES2_ApiModels.SophonsCivModel;
+using ES2_RandFairGenLibrary.ES2_ApiModels.UnfallenCivModel;
+using ES2_RandFairGenLibrary.ES2_ApiModels.VodyaniCivModel;
+using ES2_RandFairGenLibrary.ES2_ApiModels.RiftbornCivModel;
 
 namespace ES2_RandFairGen
 {
@@ -38,7 +46,7 @@ namespace ES2_RandFairGen
         //To do
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddTransient<IMainWindowAppModel, MainWindowAppModel>();
+            //services.AddSingleton<IMainWindowAppModel, MainWindowAppModel>();
             //services.AddTransient<IBaseCivModel, UnitedEmpireCivModel>();
             //services.AddTransient<IProductData, ProductData>();
             //services.AddTransient<ISaleData, SaleData>();
@@ -51,8 +59,10 @@ namespace ES2_RandFairGen
             rightPanelState = UIElementState.Visible;
             leftPanelState = UIElementState.Invisible;
 
-            mainWindowAppModel = new MainWindowAppModel(new UnitedEmpireCivModel());
+            mainWindowAppModel = new MainWindowAppModel(new CraversCivModel(), new HoratioCivModel(), new LumerisCivModel(), new RiftbornCivModel(), new SophonsCivModel(), new UnfallenCivModel(), 
+                new UnitedEmpireCivModel(), new VodyaniCivModel());
 
+            Debug.Write(mainWindowAppModel.CraversCivModel.CivilizationName);
             unitedEmpirePage = new UnitedEmpirePage(mainWindowAppModel);
         }
 
@@ -112,8 +122,7 @@ namespace ES2_RandFairGen
 
         private void ExportDataToTxtButton_Click(object sender, RoutedEventArgs e)
         {
-            //mainWindowAppModel.Overwrite();
-            MessageBox.Show("to do list ;)");
+            mainWindowAppModel.Export();
         }
 
         private void HidePanelButton_Click(object sender, RoutedEventArgs e)
